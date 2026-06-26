@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get a free health insurance quote or book a call with Cavin Rohr — independent broker licensed in 25+ states." />
+  <title>Get a Quote | Rohr Health Advisors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark">R</span>
+        <span class="logo-text">Rohr Health Advisors</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="coverage.html">Coverage</a></li>
+        <li><a href="quote.html" class="active">Get a Quote</a></li>
+        <li><a href="quote.html" class="nav-cta">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Get started</div>
+      <h1>Let's find what actually fits.</h1>
+      <p>Fill out the form below and Cavin will follow up within one business day — usually faster.</p>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container quote-layout">
+
+      <div class="quote-form-wrap">
+        <div class="form-intro">
+          <h2>Request a free quote</h2>
+          <p>No spam, no pressure. Just a straight answer about your options.</p>
+        </div>
+        <form class="quote-form" id="quoteForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="zip">ZIP code</label>
+            <input type="text" id="zip" name="zip" placeholder="33601" required />
+          </div>
+          <div class="form-group">
+            <label for="situation">Who needs coverage?</label>
+            <select id="situation" name="situation">
+              <option value="">Select one</option>
+              <option>Just me</option>
+              <option>Me + spouse / partner</option>
+              <option>Me + children</option>
+              <option>My whole family</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ages">Ages of everyone needing coverage</label>
+            <input type="text" id="ages" name="ages" placeholder="e.g. 34, 32, 6" />
+          </div>
+          <div class="form-group">
+            <label for="notes">Anything Cavin should know? <span class="optional">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Pre-existing conditions, specific doctors you want to keep, income situation, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large btn-full">Send my request</button>
+          <p class="form-note">Cavin will reach out within 1 business day. Your info is never sold or shared.</p>
+        </form>
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <div class="success-icon">✓</div>
+          <h3>You're all set.</h3>
+          <p>Cavin will be in touch shortly. In the meantime, feel free to read about <a href="coverage.html">your coverage options</a>.</p>
+        </div>
+      </div>
+
+      <div class="quote-sidebar">
+        <div class="sidebar-card">
+          <h3>Prefer to call?</h3>
+          <a href="tel:2535335464" class="phone-link">(253) 533-5464</a>
+          <p>Direct line to Cavin. No automated menus.</p>
+        </div>
+        <div class="sidebar-card">
+          <h3>What to expect</h3>
+          <ul class="expect-list">
+            <li>Response within 1 business day</li>
+            <li>20-minute call to understand your needs</li>
+            <li>Side-by-side plan comparison</li>
+            <li>Zero pressure, zero fees</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Licensed in your state?</h3>
+          <div class="states-mini">AL · CO · FL · GA · IL · IN · IA · KS · KY · LA · MD · MI · MS · MO · MT · NV · NC · OH · OK · SC · TN · TX · UT · VA · WV · WI</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">R</span>
+        <span class="logo-text">Rohr Health Advisors</span>
+        <p>Personalized health insurance guidance at no cost to you.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">Pages</div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Cavin</a>
+          <a href="coverage.html">Coverage Options</a>
+          <a href="quote.html">Get a Quote</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <a href="tel:2535335464">(253) 533-5464</a>
+          <a href="mailto:cavin@rohrhealthadvisors.com">cavin@rohrhealthadvisors.com</a>
+          <span>Tampa, FL — Serving 25+ states</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Rohr Health Advisors. All rights reserved.</span>
+      <span>Licensed Insurance Broker</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
