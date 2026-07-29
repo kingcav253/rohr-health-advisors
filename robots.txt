@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
+
+# Orphaned duplicate from an earlier upload - pending deletion
+Disallow: /quote%20(1)
+Disallow: /quote%20(1).html
+
 Sitemap: https://www.rohrhealthadvisors.com/sitemap.xml
