@@ -1,10 +1,11 @@
-// Nav scroll effect
+// ---------------------------------------------------------------- nav
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 10);
-});
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+}
 
-// Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const navLinks  = document.getElementById('navLinks');
 if (navToggle && navLinks) {
@@ -17,37 +18,107 @@ if (navToggle && navLinks) {
   });
 }
 
-// Quote form submission (works with Formspree)
-const quoteForm    = document.getElementById('quoteForm');
-const formSuccess  = document.getElementById('formSuccess');
+// ---------------------------------------------------------------- analytics
+// Safe wrapper: a missing or ad-blocked gtag must never break the page.
+function track(name, params) {
+  try {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, Object.assign({
+        page_location: window.location.href,
+        page_path: window.location.pathname
+      }, params || {}));
+    }
+  } catch (_) { /* analytics must never break UX */ }
+}
+
+// Delegated tracking for the three ways a lead can actually reach Cavin.
+document.addEventListener('click', (e) => {
+  const a = e.target.closest && e.target.closest('a[href]');
+  if (!a) return;
+  const href = a.getAttribute('href') || '';
+
+  if (href.indexOf('calendly.com') !== -1) {
+    track('generate_lead', {
+      method: 'calendly',
+      link_text: (a.textContent || '').trim().slice(0, 60)
+    });
+  } else if (href.indexOf('tel:') === 0) {
+    track('contact', { method: 'phone' });
+  } else if (href.indexOf('mailto:') === 0) {
+    track('contact', { method: 'email' });
+  }
+}, true);
+
+// ---------------------------------------------------------------- quote form
+const quoteForm   = document.getElementById('quoteForm');
+const formSuccess = document.getElementById('formSuccess');
+
 if (quoteForm) {
+  // Built up front so it's available even if the network is already down.
+  const errorBox = document.createElement('div');
+  errorBox.className = 'form-error';
+  errorBox.id = 'formError';
+  errorBox.setAttribute('role', 'alert');
+  errorBox.style.display = 'none';
+  errorBox.innerHTML =
+    '<p><strong>That didn&rsquo;t go through.</strong> Nothing was sent, so please don&rsquo;t wait on a reply.</p>' +
+    '<p>Try again below, or reach Cavin directly &mdash; either works:</p>' +
+    '<p><a href="tel:8138934125"><strong>(813) 893-4125</strong></a> &middot; ' +
+    '<a href="mailto:rohrhealthyllc@gmail.com">rohrhealthyllc@gmail.com</a> &middot; ' +
+    '<a href="https://calendly.com/rohrhealth" target="_blank" rel="noopener">book a call</a></p>';
+  quoteForm.parentNode.insertBefore(errorBox, quoteForm);
+
   quoteForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const submitBtn = quoteForm.querySelector('button[type="submit"]');
-    submitBtn.textContent = 'Sending…';
-    submitBtn.disabled = true;
 
-    const formData = new FormData(quoteForm);
+    const submitBtn = quoteForm.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn ? submitBtn.textContent : 'Send my request';
+    if (submitBtn) {
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+    }
+    errorBox.style.display = 'none';
+
+    const restore = () => {
+      if (submitBtn) {
+        submitBtn.textContent = originalLabel;
+        submitBtn.disabled = false;
+      }
+    };
+
+    // Never pretend a failed submission worked. The form stays visible with
+    // the user's input intact so they can retry without retyping anything.
+    const fail = (reason) => {
+      restore();
+      errorBox.style.display = 'block';
+      errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      track('form_error', {
+        method: 'quote_form',
+        error_reason: String(reason).slice(0, 100)
+      });
+    };
+
+    if (!quoteForm.action || quoteForm.action.indexOf('formspree.io') === -1) {
+      fail('no_endpoint_configured');
+      return;
+    }
 
     try {
-      const response = await fetch(quoteForm.action || '#', {
+      const response = await fetch(quoteForm.action, {
         method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+        body: new FormData(quoteForm),
+        headers: { Accept: 'application/json' }
       });
 
       if (response.ok) {
         quoteForm.style.display = 'none';
-        formSuccess.style.display = 'block';
+        if (formSuccess) formSuccess.style.display = 'block';
+        track('generate_lead', { method: 'quote_form' });
       } else {
-        submitBtn.textContent = 'Send my request';
-        submitBtn.disabled = false;
-        alert('Something went wrong. Please call Cavin directly at (253) 533-5464.');
+        fail('http_' + response.status);
       }
-    } catch {
-      // If no action URL set yet, show success anyway (for testing)
-      quoteForm.style.display = 'none';
-      formSuccess.style.display = 'block';
+    } catch (err) {
+      fail((err && err.message) || 'network_error');
     }
   });
 }

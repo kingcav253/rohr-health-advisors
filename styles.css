@@ -580,3 +580,17 @@ a:hover { text-decoration: underline; }
 }
 .review-summary strong { font-weight: 600; }
 .review-summary a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Quote form error panel — shown only when a submission actually fails */
+.form-error {
+  margin-bottom: 24px;
+  padding: 18px 20px;
+  border-left: 3px solid #c0392b;
+  background: rgba(192, 57, 43, 0.06);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.form-error p { margin: 0 0 8px; }
+.form-error p:last-child { margin-bottom: 0; }
+.form-error a { text-decoration: underline; text-underline-offset: 2px; }
