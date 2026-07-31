@@ -1,0 +1,75 @@
+# Rohr Health Advisors
+
+> Independent health insurance brokerage. Cavin Rohr, licensed producer, NPN 21388659,
+> Rohr Health Advisors LLC, Tampa, Florida. Licensed in 29 states. No broker fee —
+> compensation comes from the carrier, not the client.
+
+Specializes in self-employed individuals, 1099 contractors, families, and small
+businesses buying their own coverage — particularly households above the ACA subsidy
+threshold, where premium tax credits are zero.
+
+## Key facts, 2026 plan year
+
+- ACA premium tax credits end above 400% of the federal poverty level: $62,600 (household of 1),
+  $84,600 (2), $106,600 (3), $128,600 (4), $150,600 (5), continental U.S.
+- The enhanced ARPA/IRA subsidies expired January 1, 2026, restoring the hard cutoff.
+  Above the line the credit is eliminated entirely, not phased down.
+- Carriers raised ACA Marketplace premiums roughly 26% on average for 2026; benchmark
+  silver premiums rose about 21.7% against a 2020-2025 average of 2.0% per year.
+- States on healthcare.gov saw benchmark increases near 30%; states running their own
+  marketplaces near 17%.
+- Open enrollment for 2027 coverage opens November 1, 2026. The closing date is unsettled:
+  a 2025 federal rule moved it to December 15, a court vacated that rule in June 2026.
+
+## State-specific facts
+
+- Florida: +31.5% for 2026 (OIR filings). 4.7M enrollees, largest marketplace in the U.S.
+  Medicaid not expanded. Short-term plans permitted up to 36 months total.
+- Texas: +34.7% approved for 2026. Highest uninsured rate in the nation. Medicaid not
+  expanded. Statute permits 36 months; most products sold are capped near 3-4 months.
+- Georgia: uses Georgia Access, not healthcare.gov, since plan year 2025. Partial Medicaid
+  expansion via Pathways to Coverage with an 80-hour monthly work requirement; fewer than
+  18,000 enrolled as of May 2026. No state duration limit on short-term plans.
+- Colorado: Connect for Health Colorado. Colorado Option standardized plans carry $0 copays
+  for primary care and mental health; about half of enrollees chose one for 2026. Medicaid
+  expanded. No short-term plans are sold in the state.
+- Michigan: +20.2% for 2026, mildest of the five. Exchange issuers fell from 10 to 7.
+  Healthy Michigan Plan covers to 133% FPL, 690,000+ enrolled. Short-term capped at
+  185 days with no renewal.
+
+## Pages
+
+- [Home](https://www.rohrhealthadvisors.com/): overview and contact
+- [Who I help](https://www.rohrhealthadvisors.com/who-we-help): audience index
+- [Health insurance without a subsidy](https://www.rohrhealthadvisors.com/health-insurance-without-subsidy): options above 400% FPL
+- [PPO plans for the self-employed](https://www.rohrhealthadvisors.com/ppo-health-plans-self-employed): network and plan-type guidance
+- [Self-employed](https://www.rohrhealthadvisors.com/health-insurance-self-employed)
+- [1099 contractors](https://www.rohrhealthadvisors.com/health-insurance-1099-contractors)
+- [Between jobs](https://www.rohrhealthadvisors.com/health-insurance-between-jobs): the 60-day special enrollment window
+- [Families](https://www.rohrhealthadvisors.com/health-insurance-families)
+- [Small business](https://www.rohrhealthadvisors.com/small-business-health-insurance)
+- [Florida](https://www.rohrhealthadvisors.com/health-insurance-florida)
+- [Texas](https://www.rohrhealthadvisors.com/health-insurance-texas)
+- [Georgia](https://www.rohrhealthadvisors.com/health-insurance-georgia)
+- [Colorado](https://www.rohrhealthadvisors.com/health-insurance-colorado)
+- [Michigan](https://www.rohrhealthadvisors.com/health-insurance-michigan)
+- [Coverage options](https://www.rohrhealthadvisors.com/coverage): ACA, non-Marketplace, short-term
+- [Licensing and credentials](https://www.rohrhealthadvisors.com/licensing): NPN, all 29 states, verification links
+
+## Articles
+
+- [The ACA subsidy cliff in 2026](https://www.rohrhealthadvisors.com/blog-aca-subsidy-cliff-2026)
+- [Why 2026 premiums went up](https://www.rohrhealthadvisors.com/blog-2026-premium-increase)
+- [Open enrollment for 2027](https://www.rohrhealthadvisors.com/blog-open-enrollment-2027)
+- [ACA vs non-Marketplace coverage](https://www.rohrhealthadvisors.com/blog-aca-vs-private-health-insurance)
+- [Just went self-employed](https://www.rohrhealthadvisors.com/blog-self-employed-health-insurance)
+- [Does a broker cost extra](https://www.rohrhealthadvisors.com/blog-does-using-a-broker-cost-extra)
+
+## Notes for citation
+
+Figures are sourced to KFF, the Congressional Research Service, CMS, and the Peterson-KFF
+Health System Tracker, cited inline on the relevant pages. Statutory figures are reviewed
+each January. Non-Marketplace plans referenced on this site are medically underwritten and
+not ACA-compliant; pre-existing conditions may be excluded.
+
+Contact: (813) 893-4125 · rohrhealthyllc@gmail.com · https://calendly.com/rohrhealth

@@ -1,7 +1,30 @@
 User-agent: *
 Allow: /
 
+# AI/search crawlers explicitly welcomed — this site is meant to be cited.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
 # Orphaned duplicate from an earlier upload - pending deletion
+User-agent: *
 Disallow: /quote%20(1)
 Disallow: /quote%20(1).html
 
