@@ -21,6 +21,16 @@
       "source": "/subsidy-cliff-calculator",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/blank-2",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blank-3",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "headers": [
