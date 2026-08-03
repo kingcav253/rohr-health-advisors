@@ -619,7 +619,6 @@ a:hover { text-decoration: underline; }
 
 /* ---------------------------------------------- Homepage hero lead form */
 .hero-form-card { text-align: left; }
-.hero-form-sub { margin: 4px 0 16px; font-size: 0.88rem; opacity: 0.66; }
 .hf-row { margin-bottom: 11px; }
 .hf-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .hf-label {
@@ -650,7 +649,6 @@ a:hover { text-decoration: underline; }
    --text (#0d0d0d). Every child needs an explicit light colour. */
 .hero-form-card { color: var(--white); }
 .hero-form-card .card-label { color: var(--gold); }
-.hero-form-sub { color: rgba(255,255,255,0.62); }
 .hf-label { color: rgba(255,255,255,0.72); opacity: 1; }
 .hf-fine  { color: rgba(255,255,255,0.42); opacity: 1; }
 
