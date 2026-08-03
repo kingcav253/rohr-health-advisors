@@ -357,42 +357,65 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-eyebrow">Independent &#183; Unbiased &#183; No Cost to You</div>
-        <h1 class="hero-headline">Health insurance that fits <em>your</em> life.</h1>
-        <p class="hero-sub">Self-employed, 1099, or just tired of guessing every year — Cavin Rohr compares every option side by side and stays with you long after enrollment.</p>
+        <h1 class="hero-headline">Health insurance that fits <em>your household</em>.</h1>
+        <p class="hero-sub">Families, self-employed, and 1099 earners buying their own coverage — Cavin Rohr compares every option side by side and stays with you long after enrollment.</p>
         <div class="hero-actions">
           <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
           <a href="https://calendly.com/rohrhealth" target="_blank" rel="noopener" class="btn btn-ghost">Book a Call &#8599;</a>
         </div>
         <div class="hero-trust">
           <span>&#10003; Licensed in 29 states</span>
-          <span>&#10003; ACA &amp; Private plans</span>
+          <span>&#10003; Families &amp; individuals</span>
           <span>&#10003; Zero broker fees</span>
         </div>
       </div>
       <div class="hero-visual">
         <div class="hero-visual-inner">
-          <div class="hero-card">
-            <div class="card-label">Your coverage, compared</div>
-            <div class="plan-row">
-              <div class="plan-name">ACA Silver Plan</div>
-              <div class="plan-detail">$0 deductible options available</div>
-              <div class="plan-badge best">Best for most</div>
+          <div class="hero-card hero-form-card">
+            <div class="card-label">See your real options</div>
+            <p class="hero-form-sub">Thirty seconds. I reach out. You decide.</p>
+            <form class="hero-form" id="heroForm" action="https://formspree.io/f/xnjkdvba" method="POST">
+              <input type="hidden" name="source_form" value="homepage_hero" />
+              <div class="hf-row">
+                <label class="hf-label" for="hfName">Full name</label>
+                <input type="text" id="hfName" name="name" placeholder="Jane Smith" autocomplete="name" required />
+              </div>
+              <div class="hf-row">
+                <label class="hf-label" for="hfEmail">Email</label>
+                <input type="email" id="hfEmail" name="email" placeholder="jane@example.com" autocomplete="email" required />
+              </div>
+              <div class="hf-row hf-split">
+                <div>
+                  <label class="hf-label" for="hfPhone">Phone</label>
+                  <input type="tel" id="hfPhone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" />
+                </div>
+                <div>
+                  <label class="hf-label" for="hfState">State</label>
+                  <input type="text" id="hfState" name="state" placeholder="FL" autocomplete="address-level1" required />
+                </div>
+              </div>
+              <div class="hf-row">
+                <label class="hf-label" for="hfHousehold">Who needs coverage</label>
+                <select id="hfHousehold" name="household">
+                  <option value="">Select one</option>
+                  <option>Just me</option>
+                  <option>Me and my spouse or partner</option>
+                  <option>My family with children</option>
+                  <option>My team or small business</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">See my options</button>
+              <p class="hf-fine">No spam, no selling your information. A real conversation.</p>
+            </form>
+            <div class="hero-form-success" id="heroFormSuccess" style="display:none;">
+              <div class="success-icon">&#10003;</div>
+              <h3>Got it. Talk soon.</h3>
+              <p>I'll be in touch shortly. Prefer to pick a time? <a href="https://calendly.com/rohrhealth" target="_blank" rel="noopener">Book a call directly</a>.</p>
             </div>
-            <div class="plan-row">
-              <div class="plan-name">Private Health Plan</div>
-              <div class="plan-detail">Lower premiums, broader network</div>
-              <div class="plan-badge">Worth comparing</div>
-            </div>
-            <div class="plan-row">
-              <div class="plan-name">Short-Term Coverage</div>
-              <div class="plan-detail">Gap or bridge coverage</div>
-              <div class="plan-badge">Situational</div>
-            </div>
-            <div class="card-footer">Cavin reviews all of these with you — free.</div>
           </div>
           <div class="hero-headshot-wrap">
             <picture><source srcset="/cavin-rohr.webp" type="image/webp" /><img src="/cavin-rohr.jpg" alt="Cavin Rohr — independent health insurance broker, Rohr Health Advisors" class="hero-headshot" width="880" height="585" fetchpriority="high" decoding="async" /></picture>
-            <div class="hero-headshot-label">Cavin Rohr<span>Independent Broker</span></div>
+            <div class="hero-headshot-label">Cavin Rohr<span>Independent Broker &#183; NPN 21388659</span></div>
           </div>
         </div>
       </div>
@@ -560,10 +583,10 @@
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Who I Help</div>
+          <a href="/health-insurance-families">Families</a>
           <a href="/health-insurance-self-employed">Self-Employed</a>
           <a href="/health-insurance-1099-contractors">1099 Contractors</a>
           <a href="/health-insurance-between-jobs">Between Jobs</a>
-          <a href="/health-insurance-families">Families</a>
           <a href="/small-business-health-insurance">Small Business</a>
           <a href="/health-insurance-without-subsidy">No Subsidy?</a>
           <a href="/ppo-health-plans-self-employed">PPO Plans</a>
@@ -590,6 +613,10 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
         Alignable
       </a>
+    </div>
+    <div class="footer-legal">
+      <p>Rohr Health Advisors is an independent insurance brokerage. It is not affiliated with, endorsed by, or connected to any government agency, the federal Health Insurance Marketplace, healthcare.gov, or any state-based marketplace.</p>
+      <p>Plan availability, benefits, networks, and pricing vary by state and by applicant. Non-Marketplace plans are medically underwritten and are not ACA-compliant; approval is not guaranteed and pre-existing conditions may be excluded. Nothing on this site is an offer of coverage, or legal, tax, or medical advice.</p>
     </div>
     <div class="footer-bottom">
       <span>&#169; 2026 Rohr Health Advisors. All rights reserved.</span>

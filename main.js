@@ -122,3 +122,51 @@ if (quoteForm) {
     }
   });
 }
+
+// ---------------------------------------------------------------- hero form
+// Same failure discipline as the quote form: never fake a success.
+const heroForm = document.getElementById('heroForm');
+const heroFormSuccess = document.getElementById('heroFormSuccess');
+
+if (heroForm) {
+  const heroError = document.createElement('div');
+  heroError.className = 'form-error';
+  heroError.setAttribute('role', 'alert');
+  heroError.style.display = 'none';
+  heroError.innerHTML =
+    '<p><strong>That didn&rsquo;t send.</strong> Nothing went through, so please don&rsquo;t wait on a reply.</p>' +
+    '<p><a href="tel:8138934125"><strong>(813) 893-4125</strong></a> &middot; ' +
+    '<a href="https://calendly.com/rohrhealth" target="_blank" rel="noopener">book a call</a></p>';
+  heroForm.parentNode.insertBefore(heroError, heroForm);
+
+  heroForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = heroForm.querySelector('button[type="submit"]');
+    const label = btn ? btn.textContent : 'See my options';
+    if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
+    heroError.style.display = 'none';
+
+    const fail = (reason) => {
+      if (btn) { btn.textContent = label; btn.disabled = false; }
+      heroError.style.display = 'block';
+      track('form_error', { method: 'hero_form', error_reason: String(reason).slice(0, 100) });
+    };
+
+    try {
+      const r = await fetch(heroForm.action, {
+        method: 'POST',
+        body: new FormData(heroForm),
+        headers: { Accept: 'application/json' }
+      });
+      if (r.ok) {
+        heroForm.style.display = 'none';
+        if (heroFormSuccess) heroFormSuccess.style.display = 'block';
+        track('generate_lead', { method: 'hero_form' });
+      } else {
+        fail('http_' + r.status);
+      }
+    } catch (err) {
+      fail((err && err.message) || 'network_error');
+    }
+  });
+}
