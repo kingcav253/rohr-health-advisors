@@ -596,12 +596,12 @@ a:hover { text-decoration: underline; }
 .form-error a { text-decoration: underline; text-underline-offset: 2px; }
 
 /* Audience service pages */
-.pg-faq { margin: 12px 0; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.09); }
+.pg-faq { margin: 12px 0; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
 .pg-faq summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
 .pg-faq p { margin: 10px 0 0; opacity: 0.85; line-height: 1.6; }
 .proc-list { margin: 18px 0 28px; padding-left: 22px; }
 .proc-list li { margin-bottom: 12px; line-height: 1.6; }
-.hub-card { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.09); }
+.hub-card { padding: 24px 0; border-bottom: 1px solid var(--border); }
 .hub-card h2 { font-size: 1.3rem; margin: 0 0 10px; line-height: 1.3; }
 .hub-card p { margin: 0 0 12px; opacity: 0.85; line-height: 1.6; }
 @media (max-width: 860px) { .footer-links { grid-template-columns: 1fr 1fr; } }
@@ -696,11 +696,11 @@ a:hover { text-decoration: underline; }
 .state-table th {
   text-align: left; padding: 12px 14px 12px 0; width: 45%;
   font-size: 0.9rem; font-weight: 600; vertical-align: top;
-  border-bottom: 1px solid rgba(255,255,255,0.09);
+  border-bottom: 1px solid var(--border);
 }
 .state-table td {
   padding: 12px 0; font-size: 0.95rem;
-  border-bottom: 1px solid rgba(255,255,255,0.09);
+  border-bottom: 1px solid var(--border);
 }
 .state-facts-note { font-size: 0.82rem; opacity: 0.55; margin-top: 14px; line-height: 1.55; }
 .state-form-card {
@@ -714,3 +714,19 @@ a:hover { text-decoration: underline; }
   .state-grid { grid-template-columns: 1fr; gap: 28px; }
   .state-form-card { position: static; }
 }
+
+/* ------------------------------- Landing-page prose (bare p/h2 in .container) */
+.pg-prose .container > h2 { font-size: 1.5rem; color: var(--black); margin: 40px 0 12px; max-width: 780px; }
+.pg-prose .container > h3 { font-size: 1.15rem; color: var(--black); margin: 24px 0 8px; max-width: 780px; }
+.pg-prose .container > p  { margin-bottom: 18px; font-size: 0.97rem; line-height: 1.8; max-width: 780px; }
+.pg-prose .container > ul:not([class]), .pg-prose .container > ol:not([class]) {
+  padding-left: 20px; margin-bottom: 18px; max-width: 780px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.pg-prose .container > ul:not([class]) li, .pg-prose .container > ol:not([class]) li {
+  font-size: 0.97rem; color: var(--text-mid); line-height: 1.7;
+}
+.pg-prose .container > ol[class], .pg-prose .container > ul[class] { max-width: 780px; }
+.pg-prose .container > .pg-faq { max-width: 780px; }
+.pg-prose .container > .state-grid > .state-facts > p { max-width: none; }
+.pg-prose .container > h2:first-child { margin-top: 0; }
