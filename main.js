@@ -123,45 +123,53 @@ if (quoteForm) {
   });
 }
 
-// ---------------------------------------------------------------- hero form
-// Same failure discipline as the quote form: never fake a success.
-const heroForm = document.getElementById('heroForm');
-const heroFormSuccess = document.getElementById('heroFormSuccess');
+// ---------------------------------------------------------------- lead forms
+// Generic handler: binds every form marked data-lead-form. Each form declares
+// its own tracking label via data-lead-method, so attribution stays per-page
+// without duplicating this logic on every template.
+document.querySelectorAll('form[data-lead-form]').forEach((form) => {
+  const method = form.getAttribute('data-lead-method') || 'lead_form';
+  const success = document.getElementById(form.getAttribute('data-success-id') || '');
 
-if (heroForm) {
-  const heroError = document.createElement('div');
-  heroError.className = 'form-error';
-  heroError.setAttribute('role', 'alert');
-  heroError.style.display = 'none';
-  heroError.innerHTML =
+  const errorBox = document.createElement('div');
+  errorBox.className = 'form-error';
+  errorBox.setAttribute('role', 'alert');
+  errorBox.style.display = 'none';
+  errorBox.innerHTML =
     '<p><strong>That didn&rsquo;t send.</strong> Nothing went through, so please don&rsquo;t wait on a reply.</p>' +
     '<p><a href="tel:8138934125"><strong>(813) 893-4125</strong></a> &middot; ' +
     '<a href="https://calendly.com/rohrhealth" target="_blank" rel="noopener">book a call</a></p>';
-  heroForm.parentNode.insertBefore(heroError, heroForm);
+  form.parentNode.insertBefore(errorBox, form);
 
-  heroForm.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btn = heroForm.querySelector('button[type="submit"]');
-    const label = btn ? btn.textContent : 'See my options';
+    const btn = form.querySelector('button[type="submit"]');
+    const label = btn ? btn.textContent : 'Submit';
     if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
-    heroError.style.display = 'none';
+    errorBox.style.display = 'none';
 
+    // Never fake a success. The form stays put with the user's input intact.
     const fail = (reason) => {
       if (btn) { btn.textContent = label; btn.disabled = false; }
-      heroError.style.display = 'block';
-      track('form_error', { method: 'hero_form', error_reason: String(reason).slice(0, 100) });
+      errorBox.style.display = 'block';
+      track('form_error', { method: method, error_reason: String(reason).slice(0, 100) });
     };
 
+    if (!form.action || form.action.indexOf('formspree.io') === -1) {
+      fail('no_endpoint_configured');
+      return;
+    }
+
     try {
-      const r = await fetch(heroForm.action, {
+      const r = await fetch(form.action, {
         method: 'POST',
-        body: new FormData(heroForm),
+        body: new FormData(form),
         headers: { Accept: 'application/json' }
       });
       if (r.ok) {
-        heroForm.style.display = 'none';
-        if (heroFormSuccess) heroFormSuccess.style.display = 'block';
-        track('generate_lead', { method: 'hero_form' });
+        form.style.display = 'none';
+        if (success) success.style.display = 'block';
+        track('generate_lead', { method: method });
       } else {
         fail('http_' + r.status);
       }
@@ -169,4 +177,4 @@ if (heroForm) {
       fail((err && err.message) || 'network_error');
     }
   });
-}
+});

@@ -685,3 +685,32 @@ a:hover { text-decoration: underline; }
   .hero-headshot-wrap { display: none; }
   .hero-card { max-width: 100%; }
 }
+
+/* ---------------------------------------------- State landing pages */
+.state-grid {
+  display: grid; grid-template-columns: 1fr 380px;
+  gap: 36px; align-items: start; margin-bottom: 44px;
+}
+.state-facts-title { margin-top: 0; }
+.state-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.state-table th {
+  text-align: left; padding: 12px 14px 12px 0; width: 45%;
+  font-size: 0.9rem; font-weight: 600; vertical-align: top;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+}
+.state-table td {
+  padding: 12px 0; font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+}
+.state-facts-note { font-size: 0.82rem; opacity: 0.55; margin-top: 14px; line-height: 1.55; }
+.state-form-card {
+  background: var(--black-card); border: 1px solid rgba(201,168,76,0.3);
+  border-radius: var(--radius-lg); padding: 26px;
+  box-shadow: 0 8px 40px rgba(201,168,76,0.08);
+  color: var(--white); position: sticky; top: 92px;
+}
+.state-form-card .card-label { color: var(--gold); margin-bottom: 16px; }
+@media (max-width: 900px) {
+  .state-grid { grid-template-columns: 1fr; gap: 28px; }
+  .state-form-card { position: static; }
+}

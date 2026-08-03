@@ -346,6 +346,63 @@
 
   <section class="section section-light">
     <div class="container">
+      <div class="state-grid">
+        <div class="state-facts">
+          <h2 class="state-facts-title">Florida at a glance</h2>
+          <table class="state-table">
+            <tbody>
+            <tr><th scope="row">2026 rate change</th><td>31.5% before subsidies (OIR filings)</td></tr>
+            <tr><th scope="row">Market size</th><td>4.7M enrollees &mdash; largest in the country</td></tr>
+            <tr><th scope="row">Where you enroll</th><td>healthcare.gov</td></tr>
+            <tr><th scope="row">Medicaid</th><td>Not expanded &mdash; 400,000+ in the coverage gap</td></tr>
+            <tr><th scope="row">Short-term plans</th><td>Up to 36 months total</td></tr>
+            </tbody>
+          </table>
+          <p class="state-facts-note">Figures reflect 2026 plan year filings and state rules. If you're making a decision on any of these, ask me to confirm the current position for your county.</p>
+        </div>
+        <div class="state-form-card">
+          <div class="card-label">Get your Florida options</div>
+          <form class="hero-form" data-lead-form data-lead-method="state_florida" data-success-id="sf-florida" action="https://formspree.io/f/xnjkdvba" method="POST">
+            <input type="hidden" name="source_form" value="state_florida" />
+            <div class="hf-row">
+              <label class="hf-label" for="n-florida">Full name</label>
+              <input type="text" id="n-florida" name="name" placeholder="Jane Smith" autocomplete="name" required />
+            </div>
+            <div class="hf-row">
+              <label class="hf-label" for="e-florida">Email</label>
+              <input type="email" id="e-florida" name="email" placeholder="jane@example.com" autocomplete="email" required />
+            </div>
+            <div class="hf-row hf-split">
+              <div>
+                <label class="hf-label" for="p-florida">Phone</label>
+                <input type="tel" id="p-florida" name="phone" placeholder="(555) 000-0000" autocomplete="tel" />
+              </div>
+              <div>
+                <label class="hf-label" for="s-florida">State</label>
+                <input type="text" id="s-florida" name="state" value="FL" autocomplete="address-level1" required />
+              </div>
+            </div>
+            <div class="hf-row">
+              <label class="hf-label" for="h-florida">Who needs coverage</label>
+              <select id="h-florida" name="household">
+                <option value="">Select one</option>
+                <option>Just me</option>
+                <option>Me and my spouse or partner</option>
+                <option>My family with children</option>
+                <option>My team or small business</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">See my Florida options</button>
+            <p class="hf-fine">No fee. No spam. A real conversation.</p>
+          </form>
+          <div class="hero-form-success" id="sf-florida" style="display:none;">
+            <div class="success-icon">&#10003;</div>
+            <h3>Got it.</h3>
+            <p>I'll be in touch shortly. Prefer to pick a time? <a href="https://calendly.com/rohrhealth" target="_blank" rel="noopener">Book a call directly</a>.</p>
+          </div>
+        </div>
+      </div>
+
       <p>I'm based in Tampa, so Florida is the state I know best &mdash; and it had one of the roughest 2026s in the country.</p>
 
       <h2>What actually happened to Florida rates</h2>
@@ -364,15 +421,22 @@
       <p>That makes Florida one of the more workable states for bridge and non-Marketplace coverage. It also makes it a state where reading the actual term matters, because "short-term" here can mean three months or three years depending on the policy.</p>
 
       <h2>Where the cliff sits</h2>
-      <p>For 2026, premium tax credits end above <strong>$62,600</strong> for one person and <strong>$128,600</strong> for a household of four. Above that line your credit is zero and you're paying Florida's full post-increase premium. For a healthy household in that position, a non-Marketplace PPO frequently costs meaningfully less per month, with a broader network than the narrow HMOs that dominate Florida's on-exchange menu.</p>
+      <p>For 2026, premium tax credits end above <strong>$62,600</strong> for one person and <strong>$128,600</strong> for a household of four. Above that line your credit is zero and you're paying Florida's full post-increase premium. Above that line it's worth looking at everything available in Florida rather than only what healthcare.gov shows you &mdash; on-exchange menus here lean heavily toward narrow HMO networks, and that isn't the whole market.</p>
 
       <h2>Verify me before you call</h2>
       <p>Florida licenses are public. Look up NPN <strong>21388659</strong> in the <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener">Florida Department of Financial Services licensee search</a>. Rate filings are public too, through the Florida Office of Insurance Regulation, if you want to see the increases yourself rather than take my word for them.</p>
 
-      <h2>How I work, and what it costs</h2>
-      <p>A 20-minute call: household, income, health history, the doctors and prescriptions you can't lose. Then I price the unsubsidized Marketplace option against whatever non-Marketplace options exist in your state, verify networks and formularies before recommending anything, and tell you which I'd choose and why.</p>
-      <p>It costs you nothing. Brokers are paid a commission by the carrier, built into the premium whether you use one or not &mdash; enroll direct and the carrier simply keeps it. There's a fuller explanation, plus my NPN, on the <a href="/licensing">licensing page</a>.</p>
-      <p>One thing worth being direct about: the non-Marketplace plans I work with are <strong>medically underwritten</strong> and <strong>not ACA-compliant</strong>. The application asks about your health history, coverage can be declined or limited based on it, and pre-existing conditions may be excluded. In exchange you get a lower premium, a real maximum out-of-pocket, and usually a broader network. If you're managing an ongoing condition, an ACA plan's guaranteed coverage is often worth more than the premium difference &mdash; and I'll tell you that even though it's the less profitable answer for me.</p>
+      <h2>How this works</h2>
+      <ol class="proc-list">
+        <li><strong>A 20-minute call.</strong> Household, income, the doctors you want to keep, the prescriptions you take. Nothing is sold on this call.</li>
+        <li><strong>I price the whole market.</strong> Marketplace plans with any subsidy you qualify for, and everything available outside it, side by side.</li>
+        <li><strong>I check networks and formularies</strong> before recommending anything. This is where cheap plans turn expensive.</li>
+        <li><strong>You decide.</strong> I tell you what I'd choose and why &mdash; including when the answer is to stay exactly where you are.</li>
+        <li><strong>I stay on the file.</strong> Claims, billing, renewals. You call me directly for as long as you hold the policy.</li>
+      </ol>
+
+      <h2>What it costs you</h2>
+      <p>Nothing. Brokers are paid a commission by the carrier, and it's built into the premium whether you use one or not &mdash; enroll direct and the carrier simply keeps it. The plan price is identical either way. There's a fuller explanation, along with my NPN, on the <a href="/licensing">licensing page</a>.</p>
 
       <h2>Questions Florida clients ask</h2>
       <details class="pg-faq"><summary>How much did Florida health insurance go up in 2026?</summary>
