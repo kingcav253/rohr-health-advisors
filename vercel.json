@@ -31,6 +31,21 @@
       "source": "/blank-3",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/quote (1)",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/quote (1).html",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/quote%20(1)",
+      "destination": "/quote",
+      "permanent": true
     }
   ],
   "headers": [

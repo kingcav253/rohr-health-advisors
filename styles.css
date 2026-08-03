@@ -687,7 +687,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* ---------------------------------------------- State landing pages */
-.state-grid {
+.state-grid, .lp-grid {
   display: grid; grid-template-columns: 1fr 380px;
   gap: 36px; align-items: start; margin-bottom: 44px;
 }
@@ -711,22 +711,28 @@ a:hover { text-decoration: underline; }
 }
 .state-form-card .card-label { color: var(--gold); margin-bottom: 16px; }
 @media (max-width: 900px) {
-  .state-grid { grid-template-columns: 1fr; gap: 28px; }
+  .state-grid, .lp-grid { grid-template-columns: 1fr; gap: 28px; }
   .state-form-card { position: static; }
 }
 
 /* ------------------------------- Landing-page prose (bare p/h2 in .container) */
-.pg-prose .container > h2 { font-size: 1.5rem; color: var(--black); margin: 40px 0 12px; max-width: 780px; }
-.pg-prose .container > h3 { font-size: 1.15rem; color: var(--black); margin: 24px 0 8px; max-width: 780px; }
-.pg-prose .container > p  { margin-bottom: 18px; font-size: 0.97rem; line-height: 1.8; max-width: 780px; }
-.pg-prose .container > ul:not([class]), .pg-prose .container > ol:not([class]) {
+.pg-prose :is(.container, .lp-body) > h2 { font-size: 1.5rem; color: var(--black); margin: 40px 0 12px; max-width: 780px; }
+.pg-prose :is(.container, .lp-body) > h3 { font-size: 1.15rem; color: var(--black); margin: 24px 0 8px; max-width: 780px; }
+.pg-prose :is(.container, .lp-body) > p  { margin-bottom: 18px; font-size: 0.97rem; line-height: 1.8; max-width: 780px; }
+.pg-prose :is(.container, .lp-body) > ul:not([class]), .pg-prose :is(.container, .lp-body) > ol:not([class]) {
   padding-left: 20px; margin-bottom: 18px; max-width: 780px;
   display: flex; flex-direction: column; gap: 8px;
 }
-.pg-prose .container > ul:not([class]) li, .pg-prose .container > ol:not([class]) li {
+.pg-prose :is(.container, .lp-body) > ul:not([class]) li, .pg-prose :is(.container, .lp-body) > ol:not([class]) li {
   font-size: 0.97rem; color: var(--text-mid); line-height: 1.7;
 }
-.pg-prose .container > ol[class], .pg-prose .container > ul[class] { max-width: 780px; }
-.pg-prose .container > .pg-faq { max-width: 780px; }
-.pg-prose .container > .state-grid > .state-facts > p { max-width: none; }
-.pg-prose .container > h2:first-child { margin-top: 0; }
+.pg-prose :is(.container, .lp-body) > ol[class], .pg-prose :is(.container, .lp-body) > ul[class] { max-width: 780px; }
+.pg-prose :is(.container, .lp-body) > .pg-faq { max-width: 780px; }
+.pg-prose :is(.container, .lp-body) > .state-grid > .state-facts > p { max-width: none; }
+.pg-prose :is(.container, .lp-body) > h2:first-child { margin-top: 0; }
+
+/* Landing-page lead card sits alongside the prose column */
+.lp-grid { margin-bottom: 0; }
+.lp-body > p:last-child { margin-bottom: 0; }
+.lp-form-note { font-size: 0.8rem; line-height: 1.6; opacity: 0.7; margin-top: 16px; color: var(--white); }
+@media (max-width: 900px) { .lp-grid { grid-template-columns: 1fr; } }
