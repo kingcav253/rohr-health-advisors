@@ -644,3 +644,46 @@ a:hover { text-decoration: underline; }
 .hero-form-success h3 { margin: 10px 0 6px; }
 .hero-form-success p { font-size: 0.9rem; opacity: 0.8; margin: 0; }
 @media (max-width: 600px) { .hf-split { grid-template-columns: 1fr; } }
+
+/* ---------------------------------------------- Hero form: colour + mobile fixes
+   .hero-card sets a dark background but no colour, so children inherit
+   --text (#0d0d0d). Every child needs an explicit light colour. */
+.hero-form-card { color: var(--white); }
+.hero-form-card .card-label { color: var(--gold); }
+.hero-form-sub { color: rgba(255,255,255,0.62); }
+.hf-label { color: rgba(255,255,255,0.72); opacity: 1; }
+.hf-fine  { color: rgba(255,255,255,0.42); opacity: 1; }
+
+.hero-form input,
+.hero-form select {
+  color: var(--white);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.22);
+}
+.hero-form input::placeholder { color: rgba(255,255,255,0.38); }
+/* Native dropdown lists render in OS chrome — these need dark-on-light. */
+.hero-form select option { color: #111; background: #fff; }
+
+/* Autofill forces its own colours in WebKit; override both. */
+.hero-form input:-webkit-autofill,
+.hero-form input:-webkit-autofill:hover,
+.hero-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--white);
+  -webkit-box-shadow: 0 0 0 1000px #262626 inset;
+  caret-color: var(--white);
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.hero-form-success { color: var(--white); }
+.hero-form-success h3 { color: var(--white); }
+.hero-form-success p  { color: rgba(255,255,255,0.75); }
+.hero-form-success a  { color: var(--gold); text-decoration: underline; }
+
+/* The hero form is the primary conversion point — it must survive on mobile.
+   The old rule hid the whole visual column; keep the form, drop the portrait. */
+@media (max-width: 860px) {
+  .hero-visual { display: flex !important; margin-top: 28px; }
+  .hero-visual-inner { flex-direction: column; width: 100%; }
+  .hero-headshot-wrap { display: none; }
+  .hero-card { max-width: 100%; }
+}
