@@ -23,7 +23,4 @@ Allow: /
 User-agent: bingbot
 Allow: /
 
-# Orphaned duplicate from an earlier upload - pending deletion
-User-agent: *
-
 Sitemap: https://www.rohrhealthadvisors.com/sitemap.xml
