@@ -336,11 +336,17 @@ a:hover { text-decoration: underline; }
   .quote-layout { grid-template-columns:1fr; }
   .footer-inner { grid-template-columns:1fr; }
 }
-@media (max-width: 640px) {
+/* Seven nav items stop fitting on one line well above 640px, so the desktop
+   nav wrapped onto two lines inside a fixed 68px bar at tablet widths.
+   The menu now takes over at 900px. Nav rules only -- the layout rules that
+   used to share this block stay at 640px below. */
+@media (max-width: 900px) {
   .nav-links { display:none; position:absolute; top:68px; left:0; right:0; background:var(--black-soft); flex-direction:column; padding:16px 24px; border-bottom:1px solid rgba(255,255,255,0.08); box-shadow:0 8px 24px rgba(0,0,0,0.4); gap:4px; }
   .nav-links.open { display:flex; }
   .nav-toggle { display:flex; }
   .nav { position:relative; }
+}
+@media (max-width: 640px) {
   .audience-grid { grid-template-columns:1fr; }
   .form-row { grid-template-columns:1fr; }
   .hero-actions { flex-direction:column; }
@@ -687,6 +693,10 @@ a:hover { text-decoration: underline; }
 }
 
 /* ---------------------------------------------- State landing pages */
+/* The prose lives inside the grid so the lead card has something to stick
+   against; the facts block therefore needs its own bottom margin, which the
+   grid's margin used to provide when the prose sat outside it. */
+.lp-body > .state-facts { margin-bottom: 36px; }
 .state-grid, .lp-grid {
   display: grid; grid-template-columns: 1fr 380px;
   gap: 36px; align-items: start; margin-bottom: 44px;
@@ -713,6 +723,9 @@ p.fig-source { font-size: 0.85rem; opacity: 0.7; line-height: 1.6; margin: -6px 
   border-radius: var(--radius-lg); padding: 26px;
   box-shadow: 0 8px 40px rgba(201,168,76,0.08);
   color: var(--white); position: sticky; top: 92px;
+  /* On short viewports a pinned card taller than the screen strands its own
+     submit button below the fold. Cap it and let the card scroll internally. */
+  max-height: calc(100vh - 108px); overflow-y: auto;
 }
 .state-form-card .card-label { color: var(--gold); margin-bottom: 16px; }
 @media (max-width: 900px) {
@@ -733,7 +746,7 @@ p.fig-source { font-size: 0.85rem; opacity: 0.7; line-height: 1.6; margin: -6px 
 }
 .pg-prose :is(.container, .lp-body) > ol[class], .pg-prose :is(.container, .lp-body) > ul[class] { max-width: 780px; }
 .pg-prose :is(.container, .lp-body) > .pg-faq { max-width: 780px; }
-.pg-prose :is(.container, .lp-body) > .state-grid > .state-facts > p { max-width: none; }
+.pg-prose :is(.container, .lp-body) .state-facts > p { max-width: none; }
 .pg-prose :is(.container, .lp-body) > h2:first-child { margin-top: 0; }
 
 /* Landing-page lead card sits alongside the prose column */
