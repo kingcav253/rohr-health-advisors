@@ -703,6 +703,11 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--border);
 }
 .state-facts-note { font-size: 0.82rem; opacity: 0.55; margin-top: 14px; line-height: 1.55; }
+/* Provenance line under a figure ladder — says which year's guidelines produced it,
+   so the annual roll is findable rather than buried in prose. */
+.pg-prose :is(.container, .lp-body) > p.fig-source,
+p.fig-source { font-size: 0.85rem; opacity: 0.7; line-height: 1.6; margin: -6px 0 18px;
+  border-left: 2px solid var(--gold); padding-left: 14px; }
 .state-form-card {
   background: var(--black-card); border: 1px solid rgba(201,168,76,0.3);
   border-radius: var(--radius-lg); padding: 26px;

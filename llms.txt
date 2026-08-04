@@ -8,34 +8,83 @@ Specializes in self-employed individuals, 1099 contractors, families, and small
 businesses buying their own coverage — particularly households above the ACA subsidy
 threshold, where premium tax credits are zero.
 
-## Key facts, 2026 plan year
+## Subsidy thresholds — 2027 coverage
 
-- ACA premium tax credits end above 400% of the federal poverty level: $62,600 (household of 1),
-  $84,600 (2), $106,600 (3), $128,600 (4), $150,600 (5), continental U.S.
+- ACA premium tax credits end above 400% of the federal poverty level: $63,840 (household of 1),
+  $86,560 (2), $109,280 (3), $132,000 (4), $154,720 (5), continental U.S.
+- These are 400% of the 2026 HHS poverty guidelines (Federal Register, January 15, 2026).
+  The Marketplace applies the guidelines issued in the prior calendar year, so the 2026
+  guidelines govern 2027 coverage. The ladder is reissued each January.
 - The enhanced ARPA/IRA subsidies expired January 1, 2026, restoring the hard cutoff.
   Above the line the credit is eliminated entirely, not phased down.
+
+## 2027 plan year — open enrollment opens November 1, 2026
+
+- Insurers filed a median proposed increase of about 15% nationally for 2027 (KFF,
+  preliminary filings, July 2026). These are proposals, not approvals. State regulators
+  finalise most rates during September and October 2026, and approved figures have
+  historically differed substantially from filings.
+- The closing date is unsettled. A 2025 federal rule moved it to December 15; the U.S.
+  District Court for the District of Maryland vacated that provision in June 2026, and HHS
+  appealed in July 2026. Enrolling by December 15 secures January 1 coverage either way.
+- State-based marketplaces set their own calendars and are not bound by the federal window.
+
+## 2026 plan year — current coverage, in force through December 31, 2026
+
 - Carriers raised ACA Marketplace premiums roughly 26% on average for 2026; benchmark
   silver premiums rose about 21.7% against a 2020-2025 average of 2.0% per year.
 - States on healthcare.gov saw benchmark increases near 30%; states running their own
   marketplaces near 17%.
-- Open enrollment for 2027 coverage opens November 1, 2026. The closing date is unsettled:
-  a 2025 federal rule moved it to December 15, a court vacated that rule in June 2026.
+
+## Short-term plans — the federal position
+
+The 2024 federal STLDI rule caps short-term policies at a three-month initial term and four
+months total including renewals. That rule has not been repealed or vacated. On August 7,
+2025 the Departments of Labor, HHS and Treasury said they do not intend to prioritise
+enforcement of it, and signalled new rulemaking. Longer durations sold today rest on that
+discretionary non-enforcement position and on state law, not on a change to the federal
+definition. All short-term plans are medically underwritten, are not ACA-compliant, and may
+exclude pre-existing conditions.
 
 ## State-specific facts
 
-- Florida: +31.5% for 2026 (OIR filings). 4.7M enrollees, largest marketplace in the U.S.
-  Medicaid not expanded. Short-term plans permitted up to 36 months total.
-- Texas: +34.7% approved for 2026. Highest uninsured rate in the nation. Medicaid not
-  expanded. Statute permits 36 months; most products sold are capped near 3-4 months.
-- Georgia: uses Georgia Access, not healthcare.gov, since plan year 2025. Partial Medicaid
-  expansion via Pathways to Coverage with an 80-hour monthly work requirement; fewer than
-  18,000 enrolled as of May 2026. No state duration limit on short-term plans.
-- Colorado: Connect for Health Colorado. Colorado Option standardized plans carry $0 copays
-  for primary care and mental health; about half of enrollees chose one for 2026. Medicaid
-  expanded. No short-term plans are sold in the state.
-- Michigan: +20.2% for 2026, mildest of the five. Exchange issuers fell from 10 to 7.
-  Healthy Michigan Plan covers to 133% FPL, 690,000+ enrolled. Short-term capped at
-  185 days with no renewal.
+Rate figures below are approved 2026 changes unless marked proposed. Proposed 2027 figures
+are carrier filings under regulatory review, not approvals.
+
+- Florida: +31.5% approved for 2026 (FLOIR); about +15.9% proposed for 2027. 4.7M enrollees,
+  largest marketplace in the U.S. Medicaid not expanded. State statute permits short-term
+  policies up to 36 months total, subject to the federal position above.
+- Texas: +34.7% approved for 2026. No state-level 2027 figure published yet. Highest uninsured
+  rate in the nation. Medicaid not expanded. Statute permits 36 months; most products sold are
+  capped near 3-4 months.
+- Georgia: uses Georgia Access, not healthcare.gov. Open enrollment November 1 - January 15.
+  +34.6% approved for 2026; about +20.7% proposed for 2027. Partial Medicaid expansion via
+  Pathways to Coverage with an 80-hour monthly work requirement; fewer than 18,000 enrolled as
+  of April 2026. No state duration limit on short-term plans.
+- Colorado: Connect for Health Colorado. +21.2% approved for 2026; 2027 filings are under
+  review and published figures conflict, so no 2027 number is stated here. Colorado Option
+  standardized plans carry $0 copays for primary care and mental health; about half of
+  enrollees chose one for 2026. Medicaid expanded. Six-month initial terms are permitted but
+  no carrier sells short-term plans in the state.
+- Michigan: +20.2% approved for 2026; about +14.2% proposed for 2027. Three exchange insurers
+  exited for 2026 (Physicians Health Plan, Molina, HAP CareSource). Healthy Michigan Plan
+  covers to 133% FPL, 690,000+ enrolled. Short-term capped at 185 days with no renewal.
+- Illinois: Get Covered Illinois, a state-based marketplace since plan year 2026, not
+  healthcare.gov. Open enrollment November 1 - January 15. +28.8% approved for 2026; about
+  +14.1% proposed for 2027. Medicaid expanded to 138% FPL. Short-term plans have been
+  prohibited statewide since January 1, 2025 under Public Act 103-0649.
+- Tennessee: +37.5% approved for 2026. No state-level 2027 figure published yet. healthcare.gov.
+  Medicaid not expanded; coverage gap below 100% FPL.
+- Nevada: Nevada Health Link. +22.3% approved for 2026. No state-level 2027 figure published
+  yet. Battle Born State Plans are the state public option, launched for 2026. Medicaid
+  expanded. Short-term capped at 185 days, non-renewable.
+- Missouri: +23.1% approved for 2026; about +12.5% proposed for 2027. Blue Cross and Blue
+  Shield of Kansas City cut rates 4.1% for 2026 across 30 western Missouri counties, the only
+  decrease in the state. Medicaid expanded by voter initiative in 2020. Short-term permitted
+  up to 36 months total, subject to the federal position above.
+- Indiana: +26.3% approved for 2026; about +19.3% proposed for 2027. Medicaid expanded through
+  the Healthy Indiana Plan. Short-term permitted up to 36 months total, subject to the federal
+  position above.
 
 ## Pages
 
@@ -53,12 +102,17 @@ threshold, where premium tax credits are zero.
 - [Georgia](https://www.rohrhealthadvisors.com/health-insurance-georgia)
 - [Colorado](https://www.rohrhealthadvisors.com/health-insurance-colorado)
 - [Michigan](https://www.rohrhealthadvisors.com/health-insurance-michigan)
+- [Illinois](https://www.rohrhealthadvisors.com/health-insurance-illinois)
+- [Tennessee](https://www.rohrhealthadvisors.com/health-insurance-tennessee)
+- [Nevada](https://www.rohrhealthadvisors.com/health-insurance-nevada)
+- [Missouri](https://www.rohrhealthadvisors.com/health-insurance-missouri)
+- [Indiana](https://www.rohrhealthadvisors.com/health-insurance-indiana)
 - [Coverage options](https://www.rohrhealthadvisors.com/coverage): ACA, non-Marketplace, short-term
 - [Licensing and credentials](https://www.rohrhealthadvisors.com/licensing): NPN, all 29 states, verification links
 
 ## Articles
 
-- [The ACA subsidy cliff in 2026](https://www.rohrhealthadvisors.com/blog-aca-subsidy-cliff-2026)
+- [The ACA subsidy cliff](https://www.rohrhealthadvisors.com/blog-aca-subsidy-cliff-2026)
 - [Why 2026 premiums went up](https://www.rohrhealthadvisors.com/blog-2026-premium-increase)
 - [Open enrollment for 2027](https://www.rohrhealthadvisors.com/blog-open-enrollment-2027)
 - [ACA vs non-Marketplace coverage](https://www.rohrhealthadvisors.com/blog-aca-vs-private-health-insurance)
