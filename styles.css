@@ -746,3 +746,25 @@ a:hover { text-decoration: underline; }
 }
 .rev-lead { color: var(--white); opacity: 0.85; margin-bottom: 24px; font-size: 1rem; line-height: 1.7; }
 .rev-fine { color: var(--white); opacity: 0.55; font-size: 0.82rem; margin-top: 18px; }
+
+/* ------------------------------------------------- Plan type comparison table */
+.plan-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 8px 0 4px; }
+.plan-table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 0.92rem; }
+.plan-table-cap { caption-side: bottom; text-align: left; font-size: 0.8rem;
+  opacity: 0.6; padding-top: 12px; line-height: 1.5; }
+.plan-table th, .plan-table td {
+  padding: 12px 14px; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+.plan-table thead th {
+  font-family: 'Lora', serif; font-size: 1rem; color: var(--black);
+  border-bottom: 2px solid var(--gold);
+}
+.plan-table tbody th { font-weight: 600; color: var(--black); width: 22%; }
+.plan-table tbody td { color: var(--text-mid); }
+.plan-table tbody tr:last-child th, .plan-table tbody tr:last-child td { border-bottom: none; }
+.plan-table-hint { font-size: 0.78rem; opacity: 0.5; margin: 0 0 8px; }
+@media (min-width: 860px) { .plan-table-hint { display: none; } }
+.home-faq { max-width: 780px; }
+/* Second consecutive light section reads as one block, not two */
+.section-continue { padding-top: 0; }
