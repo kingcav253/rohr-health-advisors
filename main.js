@@ -37,7 +37,9 @@ document.addEventListener('click', (e) => {
   if (!a) return;
   const href = a.getAttribute('href') || '';
 
-  if (href.indexOf('calendly.com') !== -1) {
+  if (href.indexOf('g.page/r/') !== -1 || href.indexOf('writereview') !== -1) {
+    track('review_click', { link_text: (a.textContent || '').trim().slice(0, 60) });
+  } else if (href.indexOf('calendly.com') !== -1) {
     track('generate_lead', {
       method: 'calendly',
       link_text: (a.textContent || '').trim().slice(0, 60)
@@ -48,6 +50,14 @@ document.addEventListener('click', (e) => {
     track('contact', { method: 'email' });
   }
 }, true);
+
+// Self-reported attribution. The only direct read we have on whether an AI
+// assistant sent someone here, since those referrals arrive without a referrer.
+function foundUs(form) {
+  const el = form.querySelector('[name="found_us"]');
+  const v = el && el.value ? el.value : '(not answered)';
+  return v.slice(0, 60);
+}
 
 // ---------------------------------------------------------------- quote form
 const quoteForm   = document.getElementById('quoteForm');
@@ -113,7 +123,7 @@ if (quoteForm) {
       if (response.ok) {
         quoteForm.style.display = 'none';
         if (formSuccess) formSuccess.style.display = 'block';
-        track('generate_lead', { method: 'quote_form' });
+        track('generate_lead', { method: 'quote_form', found_us: foundUs(quoteForm) });
       } else {
         fail('http_' + response.status);
       }
@@ -169,7 +179,7 @@ document.querySelectorAll('form[data-lead-form]').forEach((form) => {
       if (r.ok) {
         form.style.display = 'none';
         if (success) success.style.display = 'block';
-        track('generate_lead', { method: method });
+        track('generate_lead', { method: method, found_us: foundUs(form) });
       } else {
         fail('http_' + r.status);
       }
