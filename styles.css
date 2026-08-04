@@ -768,3 +768,12 @@ a:hover { text-decoration: underline; }
 .home-faq { max-width: 780px; }
 /* Second consecutive light section reads as one block, not two */
 .section-continue { padding-top: 0; }
+
+/* Linked states in the coverage grid — the ten with pages of their own */
+.states-list a {
+  color: var(--gold); text-decoration: none;
+  border-bottom: 1px solid rgba(201,168,76,0.35);
+}
+.states-list a:hover {
+  color: var(--black); border-bottom-color: var(--black); text-decoration: none;
+}
