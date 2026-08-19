@@ -74,7 +74,7 @@ if (quoteForm) {
     '<p><strong>That didn&rsquo;t go through.</strong> Nothing was sent, so please don&rsquo;t wait on a reply.</p>' +
     '<p>Try again below, or reach Cavin directly &mdash; either works:</p>' +
     '<p><a href="tel:8138934125"><strong>(813) 893-4125</strong></a> &middot; ' +
-    '<a href="mailto:rohrhealthyllc@gmail.com">rohrhealthyllc@gmail.com</a> &middot; ' +
+    '<a href="mailto:cavin@rohrhealthadvisors.com">cavin@rohrhealthadvisors.com</a> &middot; ' +
     '<a href="https://calendly.com/rohrhealth" target="_blank" rel="noopener">book a call</a></p>';
   quoteForm.parentNode.insertBefore(errorBox, quoteForm);
 
