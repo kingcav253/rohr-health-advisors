@@ -1,0 +1,15 @@
+{
+  "brand": "Rohr Health Advisors",
+  "domain": "rohrhealthadvisors.com",
+  "competitors": ["Caprio Health", "Michalek Health Solutions", "Alliance Health Group"],
+  "notes": "Aug 3 2026 baseline was recorded in prose in SEARCH-BATTLE-PLAN.md, not as a run. Queries 1 and 3 reproduce that wording VERBATIM so the diff is valid. Query 2 is a confirmed real query from a booking on Oct 5 2026 - new series, no prior baseline.",
+  "queries": {
+    "recommendation": [
+      "best independent health insurance broker in Tampa Florida for self-employed families",
+      "healthcare brokers in the Tampa, Florida area"
+    ],
+    "informational": [
+      "Illinois health insurance December 31 deadline / short-term plans banned"
+    ]
+  }
+}
