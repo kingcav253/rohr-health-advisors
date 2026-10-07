@@ -31,6 +31,25 @@ function track(name, params) {
   } catch (_) { /* analytics must never break UX */ }
 }
 
+// Calendly records UTM parameters against the booking itself, which is the one
+// attribution signal that survives even when GA4 isn't configured. The static
+// links are tagged in the HTML; these fallback links are built at runtime, so
+// they derive the page slug from the URL to stay consistent with them.
+function calendlyUrl(placement) {
+  var slug = 'home';
+  try {
+    // Strip the extension BEFORE the index check — vercel.json sets cleanUrls,
+    // so production serves "/page", but a local or direct "/page.html" must
+    // produce the same slug as the static links on that page.
+    var p = window.location.pathname.replace(/^\/|\/$/g, '').replace(/\.html$/, '');
+    if (p && p !== 'index') slug = p;
+  } catch (_) { /* fall back to 'home' */ }
+  return 'https://calendly.com/rohrhealth'
+    + '?utm_source=rohrhealthadvisors.com&utm_medium=website'
+    + '&utm_campaign=' + encodeURIComponent(slug)
+    + '&utm_content=' + encodeURIComponent(placement);
+}
+
 // Delegated tracking for the three ways a lead can actually reach Cavin.
 document.addEventListener('click', (e) => {
   const a = e.target.closest && e.target.closest('a[href]');
@@ -75,7 +94,7 @@ if (quoteForm) {
     '<p>Try again below, or reach Cavin directly &mdash; either works:</p>' +
     '<p><a href="tel:8138934125"><strong>(813) 893-4125</strong></a> &middot; ' +
     '<a href="mailto:cavin@rohrhealthadvisors.com">cavin@rohrhealthadvisors.com</a> &middot; ' +
-    '<a href="https://calendly.com/rohrhealth" target="_blank" rel="noopener">book a call</a></p>';
+    '<a href="' + calendlyUrl('form-fallback') + '" target="_blank" rel="noopener">book a call</a></p>';
   quoteForm.parentNode.insertBefore(errorBox, quoteForm);
 
   quoteForm.addEventListener('submit', async (e) => {
@@ -148,7 +167,7 @@ document.querySelectorAll('form[data-lead-form]').forEach((form) => {
   errorBox.innerHTML =
     '<p><strong>That didn&rsquo;t send.</strong> Nothing went through, so please don&rsquo;t wait on a reply.</p>' +
     '<p><a href="tel:8138934125"><strong>(813) 893-4125</strong></a> &middot; ' +
-    '<a href="https://calendly.com/rohrhealth" target="_blank" rel="noopener">book a call</a></p>';
+    '<a href="' + calendlyUrl('form-fallback') + '" target="_blank" rel="noopener">book a call</a></p>';
   form.parentNode.insertBefore(errorBox, form);
 
   form.addEventListener('submit', async (e) => {
